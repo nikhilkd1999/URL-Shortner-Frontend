@@ -25,12 +25,6 @@ const LinkResult = ({ inputValue }) => {
       const res = await axios.post('http://localhost:9099/register', { longUrl: inputValue, shortUrl : null }, {
         headers: headers
       });
-      // .then(function (response) {
-      //   console.log(response);
-      //   // setShortenLink(response.data);
-      //   ss = response.data;
-      // });
-
       setShortenLink(res.data);
     } catch(err) {
       setError(err);
